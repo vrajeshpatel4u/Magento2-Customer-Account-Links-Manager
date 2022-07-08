@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="v4u" translate="label" sortOrder="10">
+            <label>Customer Account Links Manager</label>
+        </tab>
+        <section id="customeraccountlinksmanager" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="10" translate="label">
+            <label>Customer Account Links Manager</label>
+            <tab>v4u</tab>
+            <resource>V4U_CustomerAccountLinksManager::customeraccountlinksmanager</resource>
+            <group id="customeraccountlinksmanager" translate="label comment" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Customer Account Links Manager</label>
+                <field id="enable" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Module Status</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Enable/ Disable Customer Account Links Manager</comment>
+                </field>
+                <field id="block_names" translate="label" type="textarea" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Remove Block Names By Comma Seprated</label>
+                        <comment>
+                            &lt;strong&gt;Here are list of common block names : Add here comma seprated&lt;/strong&gt; &lt;br&gt;
+                            - customer-account-navigation-customer-balance-link : Store credit &lt;br&gt;
+                        - customer-account-navigation-downloadable-products-link : Downloadable product link &lt;br&gt;
+                        - customer-account-navigation-newsletter-subscriptions-link : Subscription link &lt;br&gt;
+                        - customer-account-navigation-billing-agreements-link : Billing agreement link &lt;br&gt;
+                        - customer-account-navigation-product-reviews-link : Product review link &lt;br&gt;
+                        - customer-account-navigation-my-credit-cards-link : My credit card link &lt;br&gt;
+                        - customer-account-navigation-account-link : Account link &lt;br&gt;
+                        - customer-account-navigation-account-edit-link : Account edit link &lt;br&gt;
+                        - customer-account-navigation-address-link : Address link &lt;br&gt;
+                        - customer-account-navigation-orders-link : Orders link &lt;br&gt;
+                        - customer-account-navigation-wish-list-link : Wish list link &lt;br&gt;
+                        - customer-account-navigation-gift-card-link : Gift card link &lt;br&gt;
+                        - customer-account-navigation-giftregistry-link : Gift registry &lt;br&gt;
+                        - customer-account-navigation-reward-link : Reward points &lt;br&gt;
+                        - customer-account-navigation-checkout-sku-link : Order by SKU 
+                        </comment>
+                        <depends>
+                            <field id="enable">1</field>
+                        </depends> 
+                        <validate>required-entry</validate>                       
+                </field> 
+            </group>
+        </section>
+    </system>
+</config>

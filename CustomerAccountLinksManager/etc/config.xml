@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+ <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <customeraccountlinksmanager>
+            <customeraccountlinksmanager>
+                <enable>0</enable>
+                <block_names>customer-account-navigation-customer-balance-link,customer-account-navigation-downloadable-products-link</block_names>
+            </customeraccountlinksmanager>
+        </customeraccountlinksmanager>
+    </default>
+</config>
